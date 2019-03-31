@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALL rivers in ‘S. America’ continent with length less than 1000 km
+    </title>
+</head>
+<body>
+    <h1>ALL rivers in ‘S. America’ continent with length less than 1000 km
+    </h1>
+    {% for length in lengths %}
+    {% if length.length < 1000 %}
+        <p>Name:{{ length.name }}  </p><br>
+        <p>Continent: {{ length.continent }} </p><br>
+        <p>Length: {{ length.length }} </p><br>
+        <hr>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

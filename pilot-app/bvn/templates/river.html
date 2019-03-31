@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All rivers in ’Africa’ continent</title>
+</head>
+<body>
+    <h1>All rivers in "Africa" continent</h1>
+    {% for i in all_rivers %}
+    {% if i.continent == 'Africa' %}
+        <p>Name:{{ i.name }}  </p><br>
+        <p>Continent: {{ i.continent }} </p><br>
+        <p>Length: {{ i.length }} </p><br>
+        <hr>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
