@@ -17,6 +17,15 @@ def newbike():
         Dailyfee = form['Dailyfee']
         Image = form['Image']
         Year = form['Year']
+        
+        new_bike ={
+            'Model': Model,
+            'Daily fee (VND)': Dailyfee,
+            'Image': Image,
+            'Year': Year,
+        }
+        Bikes.insert_one(new_bike)
+        return redirect("/newbike")
 
 if __name__ == '__main__':
   app.run(debug=True)
